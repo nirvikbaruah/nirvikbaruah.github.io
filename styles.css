@@ -1076,5 +1076,10 @@ footer .container h4{
 		width: 80%;
 		left: 10%;
 	}
+	#subAbout > .container{
+		top: -70px;
+		width: 80%;
+		left: 10%;
+	}
 }
 
