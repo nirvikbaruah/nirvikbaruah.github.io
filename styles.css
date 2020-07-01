@@ -56,6 +56,8 @@ html, body{
 	text-align: center;
 	font-family: "FatFrank";
 	overflow: hidden;
+	font-weight: 700;
+	font-size: 2vh;
 }
 
 #loader{
@@ -80,7 +82,7 @@ html, body{
 #loader .ball{
 	display: inline;
 	margin: 1px;
-	font-size: 40px;
+	font-size: 4vh;
 }
 
 .ball.a{
@@ -243,6 +245,7 @@ nav h1{
 	font-family: "FatFrank";
 	position: absolute;
 	line-height: 40px;
+	font-weight: 700;
 	left: 50px;
 	z-index: 500;
 }
@@ -405,6 +408,7 @@ nav #navMenu :hover{
 	font-size: 65px;
 	line-height: 70px;
 	font-family: "FatFrank";
+	font-weight: 700;
 	z-index: 1;
 	color: #222;
 	top: 50%;
@@ -459,6 +463,7 @@ a#arrow span{
 	display: block;
 	left: 50%;
 	font-family: "FatFrank";
+	font-weight: 700;
 	font-size: 40px;
 	bottom: 10px;
 	text-decoration: none;
@@ -572,7 +577,7 @@ a#arrow span{
 	font-family: "FatFrank";
 	letter-spacing: 3px;
 	font-size: 30px;
-	font-weight: bold;
+	font-weight: 700;
 	margin-bottom: 40px;
 }
 
@@ -697,6 +702,7 @@ footer .container h4{
 	font-family: "FatFrank";
 	z-index: 1;
 	color: #222;
+	font-weight: 700;
 	top: 40%;
 	text-align: center;
 }
