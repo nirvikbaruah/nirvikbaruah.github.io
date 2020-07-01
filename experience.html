@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <!-- Made By Nirvik Baruah 21/09/2015 -->
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <script src="//fast.eager.io/JE_HcUd0pM.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="google-site-verification" content="TUXtSfMYO9M3h0V7LH4rbi_nVNJHJSgooHpyH_IbTzo" />
+        <script src="js/jquery.js"></script>
+        <meta name="description" content="Hello, i'm Nirvik Baruah.">
+        <meta name="alexaVerifyID" content="2PPnGf-KVUm7BmbhkP7FZ_I4B8U"/>
+        <meta name="author" content="Nirvik Baruah">
+
+        <title>Nirvik Baruah</title>
+
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
+        <link href = "styles.css" rel = "stylesheet">
+
+
+    </head>
+
+    <body>
+
+        <script>
+            var menuCount = 0;
+            $.extend($.easing,{
+                def: 'easeOutQuad',
+                easeInOutCubic: function (x, t, b, c, d) {
+                    if ((t/=d/2) < 1) return c/2*t*t*t + b;
+                    return c/2*((t-=2)*t*t + 2) + b;
+                }
+            });
+
+            // Masonry layout code from https://w3bits.com/css-grid-masonry/
+            function resizeMasonryItem(item){
+              /* Get the grid object, its row-gap, and the size of its implicit rows */
+              var grid = document.getElementsByClassName('experienceContainer')[0],
+                  rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-gap')),
+                  rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+              var padding = 70;
+              /*
+               * Spanning for any brick = S
+               * Grid's row-gap = G
+               * Size of grid's implicitly create row-track = R
+               * Height of item content = H
+               * Net height of the item = H1 = H + G
+               * Net height of the implicit row-track = T = G + R
+               * S = H1 / T
+               */
+              var rowSpan = Math.ceil((item.querySelector('.container').getBoundingClientRect().height + padding +rowGap)/(rowHeight+rowGap));
+              /* Set the spanning as calculated above (S) */
+              item.style.gridRowEnd = 'span '+rowSpan;
+            }
+
+            function resizeAllMasonryItems(){
+              // Get all item class objects in one list
+              var allItems = document.getElementsByClassName('experience');
+              /*
+               * Loop through the above list and execute the spanning function to
+               * each list-item (i.e. each masonry item)
+               */
+              for(var i=0;i<allItems.length;i++){
+                resizeMasonryItem(allItems[i]);
+              }
+            }
+
+            var masonryEvents = ['load', 'resize'];
+            masonryEvents.forEach( function(event) {
+              window.addEventListener(event, resizeAllMasonryItems);
+            } );
+
+
+            $(window).load(function() {
+                resizeAllMasonryItems();
+                $("#loaderWrapper").delay(1000).fadeOut("slow", function(){
+                    $("#left").animate({height:"100%"},1000,'easeInOutCubic');
+                    $("#bottom").animate({width:"100%"}, 1000,'easeInOutCubic');
+                    $("#top").animate({width:"100%"}, 1000,'easeInOutCubic');
+                    $("#right").animate({height:"100%"}, 1000,'easeInOutCubic');
+                });
+            });
+
+            function navigationSlide(){
+                menuCount += 1;
+                if (menuCount % 2 == 0){
+                    $("#slideoutMenu").animate({top:"-100%"}, 450);
+                    $("#navMenu").html("<span class = 'bar' id = 'bar-1'></span><span class = 'bar' id = 'bar-2'></span><span class = 'bar' id = 'bar-3'></span>");
+                }
+                else{
+                    $("#slideoutMenu").animate({top:0}, 450);
+                    $("#navMenu").html("<span id = 'cross'>x</span>");
+                }
+            }
+
+            $(document).scroll(function() {
+                var offset = $(this).scrollTop();
+                var fadeUntil = 600;
+                // delta -= 1;
+
+                if( offset <= 0 ){
+                    opacity=1;
+                }
+                else if( offset <= fadeUntil ){
+                    opacity = 1 - offset/fadeUntil;
+                }
+                $("#subHeader").css('opacity',opacity);
+                $("a#arrow span").css('opacity',opacity);
+
+                if (offset >= parseInt($("#home").css("height")) * 0.90){
+                	$("#subHeader h1").css('display', 'none');
+                    $("a#arrow span").css('display', 'none');
+                }
+                else{
+                    $("a#arrow span").css('display', 'block');
+                    $("#subHeader h1").css('display', 'block');
+                }
+
+
+            });
+
+        </script>
+
+        <div id = "loaderWrapper">
+
+        	<div id = "loader">
+        		<h1>just a moment<div class = "ball a">.</div><div class = "ball b">.</div><div class = "ball c">.</div></h1>
+        	</div>
+
+        </div>
+
+        <div id="left" class = "border"></div>
+        <div id="right" class = "border"></div>
+        <div id="top" class = "border"></div>
+        <div id="bottom" class = "border"></div>
+
+        <div id = "slideoutMenu">
+
+            <div class = "container">
+                <a href = "index.html#about"><h1>About.</h1></a>
+                <a href = "experience.html"><h1>Experience.</h1></a>
+                <a href = "projects.html"><h1>Projects.</h1></a>
+                <a href = "mailto: nirvikb@stanford.edu"><h1>Contact.</h1></a>
+            </div>
+
+        </div>
+
+        <nav>
+
+            <a href = "index.html"><h1>Nirvik Baruah.</h1></a>
+
+
+            <div class = "container">
+
+                <a href = "index.html#about"><h2>about me</h2></a>
+                <a href = "experience.html"><h2>my experience</h2></a>
+                <a href = "projects.html"><h2>my projects</h2></a>
+
+            </div>
+
+            <a href = "mailto: nirvikb@stanford.edu">
+                <div id = "button">
+                    <span>Let's Talk</span>
+                </div>
+            </a>
+
+            <a id = "navMenu" onclick="navigationSlide()">
+                <span class = "bar" id = "bar-1"></span>
+                <span class = "bar" id = "bar-2"></span>
+                <span class = "bar" id = "bar-3"></span>
+            </a>
+
+        </nav>
+
+        <div id = "fixedContainer">
+            <section class = "page" id = "subHeader">
+                <h1>Experiences</h1>
+                <h3>What I've worked on.</h3>
+            </section>
+
+            <section class = "page" id = "subAbout"> 
+                <div class = "container experienceContainer">
+                    <div class = "experience">
+                        <div class = "container">
+                            <div class = "wrapper">
+                            <img src = "images/brown_cs_logo.jpg">
+                                <h2>Research Assistant</h2>
+                                <h3>Brown University AI Lab</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                <span>Summer 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "experience">
+                        <div class = "container">
+                            <div class = "wrapper">
+                                <img src = "images/stanford_logo.jpg">
+                                <h2>Job Title</h2>
+                                <h3>Stanford University</h3>
+                                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                <span>March 2020 - Present</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "experience">
+                        <div class = "container">
+                            <div class = "wrapper">
+                                <img src = "images/stanford_logo.jpg">
+                                <h2>Job Title</h2>
+                                <h3>March 2020 - Present</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <span>March 2020 - Present</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "experience">
+                        <div class = "container">
+                            <div class = "wrapper">
+                            <img src = "images/brown_cs_logo.jpg">
+                                <h2>Research Assistant</h2>
+                                <h3>Brown University AI Lab</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <span>Summer 2020</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "experience">
+                        <div class = "container">
+                            <div class = "wrapper">
+                                <img src = "images/stanford_logo.jpg">
+                                <h2>Job Title</h2>
+                                <h3>Stanford University</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <span>March 2020 - Present</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "experience">
+                        <div class = "container">
+                            <div class = "wrapper">
+                                <img src = "images/stanford_logo.jpg">
+                                <h2>Job Title</h2>
+                                <h3>March 2020 - Present</h3>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                <span>March 2020 - Present</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <div class = "container">
+                    <h3><a href = "#">email   </a>&#8226;<a href = "#">   linkedin   </a>&#8226;<a href = "#">   resume</a></h3>
+                    <h4>Made in Singapore.</h3>
+                    <h4>Copyright 2020 Nirvik Baruah.</h3>
+                </div>
+            </footer>
+        </div>
+        
+    </body>
+
+
+
+</html>
