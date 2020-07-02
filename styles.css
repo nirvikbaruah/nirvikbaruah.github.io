@@ -83,6 +83,8 @@ html, body{
 	display: inline;
 	margin: 1px;
 	font-size:40px;
+	transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
 }
 
 .ball.a{
@@ -156,6 +158,8 @@ html, body{
 #top, #bottom{
 	width: 0;
 	height: 10px;
+	transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
 }
 
 #top{
@@ -171,6 +175,8 @@ html, body{
 #left, #right{
 	height: 0;
 	width: 10px;
+	transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
 }
 
 #left{
@@ -193,6 +199,8 @@ html, body{
 	z-index: 8000;
 	text-align: center;
 	display: table;
+	transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
 }
 
 #slideoutMenu .container{
@@ -412,11 +420,11 @@ nav #navMenu :hover{
 	z-index: 1;
 	color: #222;
 	top: 50%;
-	transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
+	transform: translate3d(0,-50%,0);
+    -webkit-transform: translate3d(0,-50%,0);
+    -moz-transform: translate3d(0,-50%,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,-50%,0);
 }
 
 #home #typingText{
