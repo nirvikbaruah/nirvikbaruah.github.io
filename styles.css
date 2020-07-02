@@ -38,7 +38,6 @@ html, body{
 	margin: 0;
 	padding: 0;
 	max-width: 100%;
-	min-height: 100%;
 }
 
 .border{
@@ -979,6 +978,10 @@ footer .container h4{
 	#arrow{
 		display: none;
 	}
+	#subAbout > .container{
+		width: 70%;
+		left: 15%;
+	}
 }
 
 @media(max-width: 1300px){
@@ -1001,9 +1004,6 @@ footer .container h4{
 	}
 	nav .container h2{
 		top: 25%;
-	}
-	#arrow{
-		display: block;
 	}
 
 	#home h1{
@@ -1031,6 +1031,9 @@ footer .container h4{
 	}
 	#about p span#bolden {
 		font-size: 15px;
+	}
+	#arrow{
+		display: block;
 	}
 	#about p{
 		font-size: 13px;
