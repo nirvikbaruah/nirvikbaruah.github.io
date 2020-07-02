@@ -53,7 +53,6 @@
             }
 
             $(document).ready(function() {
-                $("#home").css({'height': $(window).height()+"px" });
                 $('#home').particleground({
                     dotColor: '#f2f2f2',
                     lineColor: '#f2f2f2',
@@ -61,12 +60,6 @@
                     parallax: false,
                 });
               });
-
-            $(window).resize(function() {
-                $("#home").css({'height': $(window).height()+"px" });
-            });
-
-            $(window).trigger('resize');
 
 
             $(window).load(function() {
@@ -106,7 +99,7 @@
                 $("#home").css('opacity',opacity);
                 $("a#arrow span").css('opacity',opacity);
 
-                if (offset >= parseInt($("#home").css("height")) * 0.95){
+                if (offset >= parseInt($("#home").css("height")) * 0.90){
                 	$("#home h1").css('display', 'none');
                     $("a#arrow span").css('display', 'none');
                 }
