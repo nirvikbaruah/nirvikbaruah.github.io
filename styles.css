@@ -486,7 +486,6 @@ a#arrow span{
 #about{
 	height: auto;
 	padding-top: 100px;
-	padding-bottom: 50px;
 }
 
 #about #mugshot{
@@ -586,7 +585,7 @@ a#arrow span{
 	letter-spacing: 3px;
 	font-size: 30px;
 	font-weight: 700;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 }
 
 #coursework h3 {
@@ -614,9 +613,30 @@ a#arrow span{
 	padding: 0;
 }
 
-#coursework .container .course{
-	font-family: "Merriweather";
-	color: #28C27C;
+#coursework .container .course h4{
+	font-family: "Montserrat";
+	font-weight: 700;
+	display: inline-block;
+	background: #2fee89;
+	text-align: center;
+	margin: 0;
+	margin-top: 5px;
+}
+
+#coursework .container .course ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-top: 5px;
+}
+
+#coursework .container .course ul li{
+	font-family: "Montserrat";
+	line-height: 30px;
+}
+
+#coursework .container .course ul li span{
+	font-weight: 700;
 }
 
 footer{
