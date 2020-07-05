@@ -542,39 +542,44 @@ a#arrow span{
 	height: auto;
 }
 
-#about .container .button {
+#coursework {
+	height: auto;
+	padding-bottom: 40px;
+}
+
+#coursework a {
+	text-decoration: none;
+}
+
+#coursework .button {
 	position: relative;
-	display: inline-block;
 	text-align: center;
+	display: block;
+	left: 50%;
 	color: #222;
 	line-height: 30px;
+	margin: 0;
+	top: 0;
 	font-family: "Montserrat";
 	font-weight: 700;
 	background: white;
 	padding-top: 7px;
+	font-size: 15px;
 	padding-bottom: 7px;
-	padding-left: 10px;
-	padding-right: 10px;
 	width: 140px;
 	height: 30px;
-	left: 0;
+	margin-top: 10px;
+	margin-left: -70px;
 	cursor: pointer;
-	margin: 10px;
-	margin-right: 20px;
-	margin-left: 20px;
 	transition: all .3s ease;
 	-webkit-transition: all .3s ease;
 	-moz-transition: all .3s ease;
 	-o-transition: all .3s ease;
 }
 
-#about .container .button:hover{
+#coursework .button:hover{
 	color: white;
 	background: #28C27C;
-}
-
-#coursework {
-	height: auto;
 }
 
 .divider {
@@ -599,44 +604,61 @@ a#arrow span{
 #coursework .container{
 	position: relative;
 	width: 60%;
-	height: 400px;
 	left: 20%;
-	display: grid;
+	display: inline-grid;
     grid-gap: 30px;
     grid-template-columns: repeat(auto-fill, minmax(30%,1fr));
-    grid-auto-rows: 1px;
+    grid-auto-rows: minmax(min-content, max-content);
+    margin-bottom: 30px;
 }
 
 #coursework .container .course{
 	position: relative;
-	height: 100px;
+	display: table;
 	padding: 0;
 }
 
 #coursework .container .course h4{
+	position: relative;
 	font-family: "Montserrat";
 	font-weight: 700;
 	display: inline-block;
 	background: #2fee89;
 	text-align: center;
 	margin: 0;
-	margin-top: 5px;
 }
 
 #coursework .container .course ul{
+	position: relative;
 	list-style: none;
+	height: auto;
 	margin: 0;
 	padding: 0;
 	margin-top: 5px;
 }
 
 #coursework .container .course ul li{
-	font-family: "Montserrat";
+	font-family: "Merriweather";
 	line-height: 30px;
+	font-weight: 400;
+	font-size: 13px;
 }
 
 #coursework .container .course ul li span{
 	font-weight: 700;
+	text-decoration: underline;
+}
+
+#coursework .container .course ul li span.CS{
+	text-decoration-color: #dc3545;
+}
+
+#coursework .container .course ul li span.math{
+	text-decoration-color: purple;
+}
+
+#coursework .container .course ul li span.classics{
+	text-decoration-color: gray;
 }
 
 footer{
@@ -1030,6 +1052,15 @@ footer .container h4{
 		font-size: 55px;
 		line-height: 70px;
 	}
+
+	#about p{
+		width: 70%;
+		left: 15%;
+	}
+	#coursework .container{
+		width: 70%;
+		left: 15%;
+	}
 	#top, #bottom{
 		height: 10px;
 	}
@@ -1057,8 +1088,14 @@ footer .container h4{
 	}
 	#about p{
 		font-size: 13px;
-		width: 70%;
-		left: 15%;
+	}
+	#coursework .container .course ul li{
+		line-height: 25px;
+		font-size: 11px;
+	}
+	#coursework .button {
+		line-height: 30px;
+		font-size: 13px;
 	}
 	footer .container h3 {
 		font-size: 15px;
@@ -1115,6 +1152,10 @@ footer .container h4{
 	}
 	#about p{
 		font-size: 11px;
+		width: 80%;
+		left: 10%;
+	}
+	#coursework .container{
 		width: 80%;
 		left: 10%;
 	}
