@@ -791,7 +791,13 @@ footer .container h4{
 	position: relative;
 	width: 80%;
 	height: 100%;
-	left: 10%;
+	max-width: 1000px;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
 	top: -100px;
 	display: grid;
     grid-gap: 30px;
@@ -1034,7 +1040,6 @@ footer .container h4{
 	}
 	#subAbout > .container{
 		width: 70%;
-		left: 15%;
 	}
 }
 
@@ -1137,7 +1142,6 @@ footer .container h4{
 	#subAbout > .container{
 		top: -70px;
 		width: 85%;
-		left: 7.5%;
 	}
 	#slideoutMenu h1{
 		font-size: 35px;
@@ -1170,7 +1174,6 @@ footer .container h4{
 	#subAbout > .container{
 		top: -70px;
 		width: 80%;
-		left: 10%;
 	}
 	#coursework .container{
 	    grid-template-columns: repeat(auto-fill, minmax(100%,1fr)) !important;
