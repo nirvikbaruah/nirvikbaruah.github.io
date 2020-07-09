@@ -1173,7 +1173,6 @@ footer .container h4{
 		left: 10%;
 	}
 	#coursework .container{
-		background: red;
 	    grid-template-columns: repeat(auto-fill, minmax(100%,1fr)) !important;
 	}
 }
