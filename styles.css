@@ -507,7 +507,14 @@ a#arrow span{
 	position: relative;
 	width: 60%;
 	text-align: justify;
-	left: 20%;
+	max-width: 850px;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX-50%);
+	-o-transform: translateX(-50%);
+	transform: 
 	text-indent: 0px;
 	font-family: "Merriweather";
 	font-size: 17px;
@@ -603,8 +610,13 @@ a#arrow span{
 
 #coursework .container{
 	position: relative;
-	width: 60%;
-	left: 20%;
+	max-width: 850px;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX-50%);
+	-o-transform: translateX(-50%);
 	display: inline-grid;
     grid-gap: 30px;
     grid-template-columns: repeat(auto-fill, minmax(30%,1fr));
@@ -1055,11 +1067,9 @@ footer .container h4{
 
 	#about p{
 		width: 70%;
-		left: 15%;
 	}
 	#coursework .container{
 		width: 70%;
-		left: 15%;
 	}
 	#top, #bottom{
 		height: 10px;
@@ -1153,16 +1163,18 @@ footer .container h4{
 	#about p{
 		font-size: 11px;
 		width: 80%;
-		left: 10%;
 	}
 	#coursework .container{
 		width: 80%;
-		left: 10%;
 	}
 	#subAbout > .container{
 		top: -70px;
 		width: 80%;
 		left: 10%;
+	}
+	#coursework .container{
+		background: red;
+	    grid-template-columns: repeat(auto-fill, minmax(100%,1fr)) !important;
 	}
 }
 
