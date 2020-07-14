@@ -88,11 +88,14 @@
             function navigationSlide(){
                 menuCount += 1;
                 if (menuCount % 2 == 0){
-                    $("#slideoutMenu").animate({top:"-200%"}, 450);
+                    $("#slideoutMenu").animate({opacity:"0"}, 350, function(){
+                        $("#slideoutMenu").css("display", "none");
+                    });
                     $("#navMenu").html("<span class = 'bar' id = 'bar-1'></span><span class = 'bar' id = 'bar-2'></span><span class = 'bar' id = 'bar-3'></span>");
                 }
                 else{
-                    $("#slideoutMenu").animate({top:0}, 450);
+                    $("#slideoutMenu").css("display", "table");
+                    $("#slideoutMenu").animate({opacity:"0.95"}, 350);
                     $("#navMenu").html("<span id = 'cross'>x</span>");
                 }
             }
@@ -244,7 +247,7 @@
             </section>
             <footer>
                 <div class = "container">
-                    <h3><a href = "mailto: nirvikb@stanford.edu">email   </a>&#8226;<a href = "https://www.linkedin.com/in/nirvik-b-805b47118/">   linkedin   </a>&#8226;<a href = "dist/resume.pdf">   resume   </a></a>&#8226;<a href = "https://github.com/nirvikbaruah">   github</a></h3>
+                    <h3><a href = "mailto: nirvikb@stanford.edu">email   </a>&#8226;<a href = "https://www.linkedin.com/in/nirvik-b-805b47118/" target = "_blank">   linkedin   </a>&#8226;<a href = "dist/resume.pdf" target = "_blank">   resume   </a></a>&#8226;<a href = "https://github.com/nirvikbaruah" target = "_blank">   github</a></h3>
                     <h4>Made in Singapore.</h3>
                     <h4>Copyright 2020 Nirvik Baruah.</h3>
                 </div>

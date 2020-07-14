@@ -25,7 +25,7 @@
 
         <script>
 
-            var words = ["sample text."];
+            var words = ["developer.", "researcher.", "programmer."];
             var wordCount = 0;
             var letterCount = 0;
             var changeWord = false;
@@ -43,7 +43,9 @@
 
             function scrollAbout() {
                 if (menuCount % 2 != 0){
-                    $("#slideoutMenu").animate({top:"-100%"}, 450);
+                    $("#slideoutMenu").animate({opacity:"0"}, 350, function(){
+                        $("#slideoutMenu").css("display", "none");
+                    });
                     $("#navMenu").html("<span class = 'bar' id = 'bar-1'></span><span class = 'bar' id = 'bar-2'></span><span class = 'bar' id = 'bar-3'></span>");
                     menuCount++;
                 }
@@ -67,11 +69,14 @@
             function navigationSlide(){
                 menuCount += 1;
                 if (menuCount % 2 == 0){
-                    $("#slideoutMenu").animate({top:"-200%"}, 450);
+                    $("#slideoutMenu").animate({opacity:"0"}, 350, function(){
+                        $("#slideoutMenu").css("display", "none");
+                    });
                     $("#navMenu").html("<span class = 'bar' id = 'bar-1'></span><span class = 'bar' id = 'bar-2'></span><span class = 'bar' id = 'bar-3'></span>");
                 }
                 else{
-                    $("#slideoutMenu").animate({top:0}, 450);
+                    $("#slideoutMenu").css("display", "table");
+                    $("#slideoutMenu").animate({opacity:"0.95"}, 350);
                     $("#navMenu").html("<span id = 'cross'>x</span>");
                 }
             }
@@ -188,7 +193,7 @@
                     <h1>Hello!<br>
                     I'm <div class = "underline green"><span>Nirvik Baruah</span></div>.
                     <br>
-                    I'm a <div id = "typingText">sample text.</div></span><span id="cursor">|</span><br>
+                    I'm a <div id = "typingText">developer.</div></span><span id="cursor">|</span><br>
                     </h1>
                 </div>
 
@@ -202,11 +207,10 @@
 
                 <p>
 
-                    <span id = "bolden">I'm Nirvik. I am a sophomore in Stanford University majoring in Computer Science and Classical Languages.</span><br>
-                    
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the <span class = "emphasize">industry's standard</span> dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Example of how i might <span class = "emphasize">highlight some text</span>.
+                    <span id = "bolden">I’m Nirvik. I am a sophomore in Stanford University majoring in Computer Science and Classical Languages.</span><br>
+                    I’m currently a researcher at the <span class = "emphasize">Brown University AI Lab</span> where I am working under Assistant Professor Carsten Eickhoff to build a literature search engine for geneticists. Beyond this, I’m serving as a Tech Fellow for <span class = "emphasize">TreeHacks</span> where I’m helping organise one of the largest hackathons in the Bay Area.
 
-    <br><br>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of <span class = "emphasize">Letraset sheets</span> containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br><br>
+    <br><br>My passions include technology, music, hiking, and history. In particular, I love working on novel applications of software, ranging from <span class = "emphasize">healthcare tech</span> and <span class = "emphasize">news summarisation</span> to initiatives which increase <span class = "emphasize">access to education</span>. Reach out if you have a project that you want to get started or just fancy saying hey!<br><br>
 
                 </p>
             </section>
@@ -243,7 +247,7 @@
             </section>
             <footer>
                 <div class = "container">
-                    <h3><a href = "mailto: nirvikb@stanford.edu">email   </a>&#8226;<a href = "https://www.linkedin.com/in/nirvik-b-805b47118/">   linkedin   </a>&#8226;<a href = "dist/resume.pdf">   resume   </a></a>&#8226;<a href = "https://github.com/nirvikbaruah">   github</a></h3>
+                    <h3><a href = "mailto: nirvikb@stanford.edu">email   </a>&#8226;<a href = "https://www.linkedin.com/in/nirvik-b-805b47118/" target = "_blank">   linkedin   </a>&#8226;<a href = "dist/resume.pdf" target = "_blank">   resume   </a></a>&#8226;<a href = "https://github.com/nirvikbaruah" target = "_blank">   github</a></h3>
                     <h4>Made in Singapore.</h3>
                     <h4>Copyright 2020 Nirvik Baruah.</h3>
                 </div>
