@@ -8,13 +8,13 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="js/jquery.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <meta name="description" content="Hello, i'm Nirvik Baruah.">
         <meta name="author" content="Nirvik Baruah">
 
         <title>Nirvik Baruah</title>
 
-        <!-- Bootstrap Core CSS -->
+        <link rel="preload" as="font" href="fonts/FatFrank.woff" type="font/woff2" crossorigin="anonymous">
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
         <link href = "styles.css" rel = "stylesheet">
@@ -113,7 +113,7 @@
 
             });
 
-            $(window).load(function() {
+            $(window).on('load', function(){
                 resizeAllMasonryItems();
                 $("#loaderWrapper").delay(1000).fadeOut("slow", function(){
                     $("#left").animate({height:"100%"},1000,'easeInOutCubic');

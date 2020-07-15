@@ -10,13 +10,14 @@
         <script src="//fast.eager.io/JE_HcUd0pM.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="google-site-verification" content="TUXtSfMYO9M3h0V7LH4rbi_nVNJHJSgooHpyH_IbTzo" />
-        <script src="js/jquery.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <meta name="description" content="Hello, i'm Nirvik Baruah.">
         <meta name="alexaVerifyID" content="2PPnGf-KVUm7BmbhkP7FZ_I4B8U"/>
         <meta name="author" content="Nirvik Baruah">
 
         <title>Nirvik Baruah</title>
 
+        <link rel="preload" as="font" href="fonts/FatFrank.woff" type="font/woff2" crossorigin="anonymous">
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Merriweather:400,700' rel='stylesheet' type='text/css'>
         <link href = "styles.css" rel = "stylesheet">
@@ -75,7 +76,7 @@
             } );
 
 
-            $(window).load(function() {
+            $(window).on('load', function(){
                 resizeAllMasonryItems();
                 $("#loaderWrapper").delay(1000).fadeOut("slow", function(){
                     $("#left").animate({height:"100%"},1000,'easeInOutCubic');

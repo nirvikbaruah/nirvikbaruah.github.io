@@ -17,9 +17,8 @@ limitations under the License.
 
 @font-face {
     font-family: 'FatFrank';
-    src: url('fonts/FatFrank.eot');
-    src: url('fonts/FatFrank.eot?#iefix') format('embedded-opentype'),
-         url('fonts/FatFrank.woff') format('woff'),
+    src: url('fonts/FatFrank.woff') format('woff'),
+    	 url('fonts/FatFrank.eot?#iefix') format('embedded-opentype'),
          url('fonts/FatFrank.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
