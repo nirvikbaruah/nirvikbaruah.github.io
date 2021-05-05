@@ -489,12 +489,12 @@ a#arrow span{
 
 #about #mugshot{
 	position: relative;
-	width: 200px;
-	height: 200px;
+	width: 250px;
+	height: 250px;
 	border-radius: 50%;
 	left: 50%;
 	top: 0;
-	margin-left: -100px;
+	margin-left: -125px;
 	margin-bottom: 50px;
 	background-image: url('images/mugshot.JPG');
 	background-position: center;
@@ -1115,9 +1115,9 @@ footer .container h4{
 		font-size: 15px;
 	}
 	#about #mugshot{
-		width: 150px;
-		height: 150px;
-		margin-left: -75px;
+		width: 200px;
+		height: 200px;
+		margin-left: -100px;
 		margin-bottom: 30px;
 	}
 	#subHeader {
